@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>アンケートへ移動中...</title>
+  <script>
+    window.onload = function() {
+      // 振り分けたいGoogleフォームのURLを設定
+      const formUrls = [
+        "https://docs.google.com/forms/d/e/1FAIpQLScdz-JgEj2lhdIoIJczq5CNe9DXL5DvCV6vBkoPgD2ZrRqGXQ/viewform",
+        "https://docs.google.com/forms/d/e/1FAIpQLSfgf1MjCvV6XXT2uXlOlFwyhTQupJDbHjnGDhhaTX6un1W3TQ/viewform"
+      ];
+      
+      // ランダムにURLを1つ選ぶ
+      const randomIndex = Math.floor(Math.random() * formUrls.length);
+      const targetUrl = formUrls[randomIndex];
+      
+      // 自動的に遷移させる
+      window.location.replace(targetUrl);
+    };
+  </script>
+</head>
+<body style="font-family: sans-serif; text-align: center; padding: 50px 20px;">
+  <p>アンケート画面へ自動的に移動しています...</p>
+  <p style="font-size: 0.9em; color: #666;">※画面が切り替わらない場合は、ページを再読み込みしてください。</p>
+</body>
+</html>
